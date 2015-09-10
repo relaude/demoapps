@@ -1,0 +1,114 @@
+﻿<!DOCTYPE html>
+<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]><!--> <html data-ng-app="webapps" class="no-js" > <!--<![endif]-->
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+        <title></title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width">
+
+        <style>
+            body {
+                padding-top: 50px;
+                padding-bottom: 20px;
+            }
+        </style>
+        <link href="Content/bootstrap.min.css" rel="stylesheet" type="text/css" />
+        <link href="Content/bootstrap-theme.min.css" rel="stylesheet" type="text/css" />
+        <link href="Content/d3chart.css" rel="stylesheet" type="text/css" />
+        <link href="Content/toaster.css" rel="stylesheet" type="text/css" />
+        <link href="Content/ng-animate.css" rel="stylesheet" type="text/css" />
+        <link href="Content/nga.min.css" rel="stylesheet" type="text/css" />
+
+        <script src="Scripts/modernizr-2.5.3.js" type="text/javascript"></script>
+    </head>
+
+    
+
+    <body>
+        <!--[if lt IE 7]>
+            <p class="chromeframe">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> or <a href="http://www.google.com/chromeframe/?redirect=true">activate Google Chrome Frame</a> to improve your experience.</p>
+        <![endif]-->
+    <div class="navbar navbar-inverse navbar-fixed-top"> 
+      <div class="container">
+        <div class="navbar-header">
+          <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+            <a class="navbar-brand" href="#">
+                <img src="/Images/angularshield-small.png" style="max-width:25px; overflow: visible; padding-top: 0; padding-bottom: 0;" />
+                Angular JS
+            </a>
+        </div>
+        <div class="navbar-collapse collapse">
+          <ul class="nav navbar-nav" data-ng-controller="NavbarController">
+            
+            <li data-ng-class="{'active':getClass('/jumbotron')}"><a href="#jumbotron">Bootstrap</a></li>
+            <li data-ng-class="{'active':getClass('/demo')}"><a href="#demo">EPplus</a></li>
+            <li data-ng-class="{'active':getClass('/northwind')}"><a href="#northwind">Northwind</a></li>
+            <li data-ng-class="{'active':getClass('/d3chart')}"><a href="#d3chart">D3 Chart</a></li>
+            
+            <li class="dropdown" data-ng-class="{'active':getDropDownClass()}">
+              <a class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">PDF Viewer <span class="caret"></span></a>
+              <ul class="dropdown-menu">
+                <li><a href="#googleviewdoc">Embeddable</a></li>
+                <li><a href="#pdfjsdemo">PDF.js</a></li>
+              </ul>
+            </li>
+
+          </ul>
+        </div><!--/.navbar-collapse -->
+      </div>
+    </div>
+
+    <div class="view-container">
+        <!--<div ng-view class="view-animation"></div>-->
+        <div ng-view class="nga-default nga-slide-up ng-show"></div>
+        <toaster-container toaster-options="{'position-class': 'toast-bottom-right'}"></toaster-container>
+    </div>    
+        
+        <!-- Vendor Libs: jQuery only used for Bootstrap functionality -->
+        <script src="Scripts/angular.js" type="text/javascript"></script>
+        <script src="Scripts/angular-route.js" type="text/javascript"></script>
+        <script src="Scripts/angular-animate.js" type="text/javascript"></script>
+        <script src="Scripts/jquery-1.9.1.min.js" type="text/javascript"></script>
+        <script src="Scripts/d3.min.js" type="text/javascript"></script>
+        <script src="Scripts/toaster.js" type="text/javascript"></script>
+        <script src="Scripts/pdfobject.js" type="text/javascript"></script>
+
+        <!-- Pdf.js Libs -->
+        <script src="Scripts/pdfjs/shared/util.js"></script>
+        <script src="Scripts/pdfjs/display/api.js"></script>
+        <script src="Scripts/pdfjs/display/metadata.js"></script>
+        <script src="Scripts/pdfjs/display/canvas.js"></script>
+        <script src="Scripts/pdfjs/display/webgl.js"></script>
+        <script src="Scripts/pdfjs/display/pattern_helper.js"></script>
+        <script src="Scripts/pdfjs/display/font_loader.js"></script>
+        <script src="Scripts/pdfjs/display/annotation_helper.js"></script>
+
+         <!-- UI Libs -->
+        <script src="Scripts/bootstrap.min.js" type="text/javascript"></script>
+
+        <!-- App libs -->
+        <script src="app/app.js"></script>
+        <script src="app/controllers/controllers.js"></script>
+        <script src="app/services/epplusService.js"></script>
+        <script src="app/services/northwindService.js"></script>
+        <script src="app/services/chartService.js"></script>
+        <script src="app/directives/inputTypeFile.js"></script>
+        <script src="app/services/pdfjsdemoService.js"></script>
+        <script src="app/services/pdfobjectdemoService.js"></script>
+
+        <script>
+            var _gaq=[['_setAccount','UA-XXXXX-X'],['_trackPageview']];
+            (function(d,t){var g=d.createElement(t),s=d.getElementsByTagName(t)[0];
+            g.src='//www.google-analytics.com/ga.js';
+            s.parentNode.insertBefore(g,s)}(document,'script'));
+        </script>
+    </body>
+</html>

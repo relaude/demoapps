@@ -1,0 +1,17 @@
+.idea
+DataAccess/bin/*
+DataAccess/obj/*
+DataModel/bin/*
+DataModel/obj/*
+packages/*
+Repository/bin/*
+Repository/obj/*
+ServicePovider/bin/*
+ServicePovider/obj/*
+webapps/bin/*
+webapps/obj/*
+webapps/Content/*
+webapps/fonts/*
+webapps/Images/*
+webapps/Scripts/*
+webapps/tempfile/*

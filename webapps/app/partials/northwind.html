@@ -1,0 +1,54 @@
+<div class="container">
+    <div class="page-header">
+        <h1>Northwind <small>Products</small></h1>
+    </div>
+
+    <form class="form-inline" role="search">
+        <div class="input-group add-on">
+            <input ng-model="keyword" type="text" class="form-control" placeholder="Search" name="srch-term" id="srch-term">
+            <div class="input-group-btn">
+                <button class="btn btn-default"><i class="glyphicon glyphicon-search"></i></button>
+            </div>
+        </div>
+    </form>
+
+    <table class="table">
+        <thead>
+            <tr>
+                <th>Name</th>
+                <th>Qty/Unit</th>
+                <th>Price</th>
+                <th>Stock</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr ng-repeat="product in products | filter:keyword">
+                <td>{{ product.ProductName }}</td>
+                <td>{{ product.QuantityPerUnit }}</td>
+                <td>{{ product.UnitPrice }}</td>
+                <td>{{ product.UnitsInStock }}</td>
+            </tr>
+        </tbody>
+    </table>
+
+    <nav>
+      <ul class="pagination">
+        <li>
+          <a href="#" aria-label="Previous">
+            <span aria-hidden="true">&laquo;</span>
+          </a>
+        </li>
+        <li><a href="#">1</a></li>
+        <li><a href="#">2</a></li>
+        <li><a href="#">3</a></li>
+        <li><a href="#">4</a></li>
+        <li><a href="#">5</a></li>
+        <li>
+          <a href="#" aria-label="Next">
+            <span aria-hidden="true">&raquo;</span>
+          </a>
+        </li>
+      </ul>
+    </nav>
+
+</div>
