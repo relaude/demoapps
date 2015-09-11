@@ -64,7 +64,11 @@ app.controller('chartController', function ($scope, chartService) {
 })
 
 app.controller('pdfjsdemoController', function ($scope, pdfjsdemoService) {
-    pdfjsdemoService.loadPDF();
+    pdfjsdemoService.loadPDF(1);
+
+    $scope.gotoPage = function () {
+        pdfjsdemoService.loadPDF(parseInt($scope.pageNum));
+    }
 })
 
 app.controller('pdfobjectdemoController', function ($scope, pdfobjectdemoService) {

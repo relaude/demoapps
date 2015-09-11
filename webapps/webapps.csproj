@@ -145,6 +145,7 @@
     <Content Include="app\controllers\controllers.js" />
     <Content Include="app\directives\animatedView.js" />
     <Content Include="app\directives\inputTypeFile.js" />
+    <Content Include="app\directives\ng-pdfviewer.js" />
     <Content Include="app\partials\d3chart.html" />
     <Content Include="app\partials\demo.html" />
     <Content Include="app\partials\googledocview.html" />
@@ -161,6 +162,7 @@
     <Content Include="Content\bootstrap.css" />
     <Content Include="Content\bootstrap.min.css" />
     <Content Include="Content\d3chart.css" />
+    <None Include="Content\pdf\flexpapaerzine.pdf" />
     <None Include="Content\pdf\TS-chart.pdf" />
     <None Include="Content\tsv\data.tsv" />
     <Content Include="Content\loading-bar.css" />
@@ -589,7 +591,9 @@
     <Content Include="Scripts\pdfjs\display\webgl.js" />
     <Content Include="Scripts\pdfjs\doc_helper.js" />
     <Content Include="Scripts\pdfjs\images\logo.svg" />
+    <Content Include="Scripts\pdfjs\pdf.compat.js" />
     <Content Include="Scripts\pdfjs\pdf.js" />
+    <Content Include="Scripts\pdfjs\pdf.worker.js" />
     <Content Include="Scripts\pdfjs\shared\cffStandardStrings.js" />
     <Content Include="Scripts\pdfjs\shared\fonts_utils.js" />
     <Content Include="Scripts\pdfjs\shared\util.js" />

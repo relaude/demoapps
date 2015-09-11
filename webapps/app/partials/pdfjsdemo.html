@@ -4,6 +4,17 @@
         <h1>PDF.js <small>is a Portable Document Format (PDF) <a href="https://github.com/mozilla/pdf.js" target="_blank">viewer</a> that is built with HTML5</small></h1>
     </div>
 
-    <canvas id="the-canvas" style="border:1px solid black;"/>
+    <div class="row">
+        <div class="col-md-4">
+        <div class="input-group">
+        <span class="input-group-btn">
+        <button ng-click="gotoPage(pageNum)" class="btn btn-primary" type="button">Go to page</button>
+        </span>
+        <input ng-model="pageNum" type="text" class="form-control" placeholder="page number...">
+        </div>
+        </div>
+    </div>
+    
+    <br /><canvas id="the-canvas" style="border:1px solid black;" />
 
 </div>

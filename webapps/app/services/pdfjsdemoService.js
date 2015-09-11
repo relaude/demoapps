@@ -1,9 +1,9 @@
 ﻿app.service('pdfjsdemoService', function () {
-    this.loadPDF = function () {
+    this.loadPDF = function (page) {
         PDFJS.workerSrc = 'Scripts/pdfjs/worker_loader.js';
-        PDFJS.getDocument('Content/pdf/TS-chart.pdf').then(function (pdf) {
+        PDFJS.getDocument('Content/pdf/flexpapaerzine.pdf').then(function (pdf) {
             // Using promise to fetch the page
-            pdf.getPage(1).then(function (page) {
+            pdf.getPage(page).then(function (page) {
                 var scale = 1.5;
                 var viewport = page.getViewport(scale);
 
